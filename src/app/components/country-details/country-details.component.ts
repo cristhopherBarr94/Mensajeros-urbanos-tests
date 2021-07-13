@@ -1,6 +1,6 @@
 import { OnDestroy } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { CountriesService } from 'src/app/services/countries.service';
 
@@ -17,7 +17,8 @@ export class CountryDetailsComponent implements OnInit, OnDestroy {
 
   constructor(
     public activeRoute: ActivatedRoute,
-    private countriesService: CountriesService
+    private countriesService: CountriesService,
+    private router:Router,
   ) { }
 
   ngOnInit(): void {
@@ -34,8 +35,17 @@ export class CountryDetailsComponent implements OnInit, OnDestroy {
     
   }
   
+  redirectTo(id:any){
+    this.router.navigate([`country-details/${id}`], {
+      queryParamsHandling: 'preserve',
+    });
+    setTimeout(() => {
+      window.location.reload()
+    },500)
+  }
+
   goBack(){
-    window.history.back()
+    this.router.navigate([``]);
   }
 
   ngOnDestroy(){

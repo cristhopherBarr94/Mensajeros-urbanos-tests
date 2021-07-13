@@ -38,7 +38,7 @@
 }
 
 .btn-header{
-  @include btn(100px, 30px, transparent, $primary-black, 'Roboto',12px, 14px !important);
+  @include btn(100px, 30px, transparent, $primary-black, 'Nunito Sans',12px, 14px !important);
   padding: 0 5px !important;
   .material-icons-outlined{
     font-size: 16px;
@@ -46,7 +46,7 @@
 
   @media (min-width:600px){
   
-  @include btn(140px, 60px, transparent, $primary-black, 'Roboto',16px, 18px !important);
+  @include btn(140px, 60px, transparent, $primary-black,'Nunito Sans',16px, 18px !important);
   padding: 5px 16px !important;
   .material-icons-outlined{
     font-size: 22px;
@@ -55,7 +55,7 @@
 }
 
 .btn-return{
-  @include btn(100px, 30px, $primary-white, $primary-black, 'Roboto',14px, 16px !important);
+  @include btn(100px, 30px, $primary-white, $primary-black, 'Nunito Sans',14px, 16px !important);
   border-radius: 0 !important;
   box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
   -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
@@ -65,9 +65,19 @@
   }
 
   @media (min-width:600px){
-    @include btn(140px, 40px, $primary-white, $primary-black, 'Roboto',16px, 18px !important);
+    @include btn(140px, 40px, $primary-white, $primary-black, 'Nunito Sans',16px, 18px !important);
     .material-icons-outlined{
       font-size: 20px;
     }
   }
+}
+
+.btn-borders{
+  @include btn(100px, 30px, $primary-white, $primary-black, 'Nunito Sans',14px, 16px !important);
+  border-radius: 0 !important;
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
+  -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
+  -moz-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
+
+
 }

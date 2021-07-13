@@ -2,27 +2,61 @@
 @import './variables.scss';
 
 
-@mixin title($ffamily, $fsize, $lineh, $color) {
-  font-family: $ffamily;
-  font-style: normal;
-  font-weight: normal;
-  font-size: $fsize;
-  line-height: $lineh;
-  color: $color;
+@mixin textProperty($ffamily, $fsize, $lineh, $color) {
+  font-family: $ffamily !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: $fsize !important;
+  line-height: $lineh !important;
+  color: $color !important;
 }
 
-/* titles */
+/* Header Title */
 .title-header {
-  @include title('Roboto', 12px, 14x, $primary-black);
-  font-weight: bold;
+  @include textProperty('Nunito Sans', 14px, 16x, $primary-black);
+  font-weight: 600 !important;
   letter-spacing: 2px;
   @media (min-width:1024px){
-    @include title('Roboto',24px, 26px, $primary-black);
-    font-weight: bold;
+    @include textProperty('Nunito Sans',26px, 26px, $primary-black);
+    font-weight: 800!important;
     letter-spacing: 2px;
   }
 }
-
+/* Inputs */ 
 .select-font {
-  @include title('Gotham', 20px, 22px, $primary-white);
+  @include textProperty('Nunito Sans', 14px, 16px, $primary-grey);
+}
+.mat-input-element {
+  @include textProperty('Nunito Sans', 14px, 16px, $primary-grey);
+  font-weight: 600 !important;
+}
+
+/* Cards */
+.country-card__content{
+  .title{
+    @include textProperty('Nunito Sans', 20px, 22px, $primary-black);
+    font-weight: 800 !important;
+
+  }
+  .bodytext{
+    @include textProperty('Nunito Sans', 14px, 16px, $primary-black);
+    font-weight: 300 !important;
+    margin-bottom: 0 !important;
+  }
+}
+
+/* Details */
+.details__content{
+  &__title{
+    @include textProperty('Nunito Sans', 20px, 22px, $primary-black);
+    font-weight: 800 !important;
+  }
+  &__bodytext{
+    @include textProperty('Nunito Sans', 14px, 16px, $primary-black);
+    font-weight: 300 !important;
+    @media (min-width:1024px){
+      @include textProperty('Nunito Sans', 16px, 18px, $primary-black);
+    }
+  }
+
 }

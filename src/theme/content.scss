@@ -2,12 +2,6 @@
 @import './variables.scss';
 
 /* flex styles */
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-}
-
 .row {
   display: flex;
   flex-direction: row;
@@ -20,6 +14,8 @@
   align-items: center;
   justify-content: center;
 }
+
+/* Grid Styles*/
 
 .grid {
   display: grid;
@@ -50,15 +46,18 @@
   }
   }
 
-.separator {
-  flex: 1 1 auto;
-}
+  .small-grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    grid-row-gap: 20px;
+    }
 
 
 .box-shadow {
-  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25) ;
-  -webkit-box-shadow: 1px 6px 4px rgba(0, 0, 0, 0.25) ;
-  -moz-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2) !important;
+  -webkit-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2) !important;
+  -moz-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2) !important;
 }
 
 .container{
@@ -75,7 +74,6 @@
 .country-card{
 width:228px;
 margin:auto;
-box-shadow: none !important;
 cursor: pointer;
 @media (min-width: 1024px){
   width: 250px;

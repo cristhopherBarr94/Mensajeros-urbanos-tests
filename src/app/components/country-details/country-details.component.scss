@@ -16,6 +16,7 @@
             .details{
                 display:flex;
                 flex-direction: column;
+                align-items: flex-start;
                 width:100%;
                 @media (min-width:1024px){
                     flex-direction:row;
@@ -33,9 +34,27 @@
                 }
                 &__content{
                     flex-direction: column;
+                    flex: 1;
                     padding: 20px 0;
                     @media (min-width:1024px){
                         flex-direction:row;
+                    }
+                    .inner-section{
+                        display:flex;
+                        flex-direction: column;
+                        @media (min-width:1024px){
+                            flex-direction:row;
+                        }
+
+                        .col{
+                            align-items: flex-start;
+                            justify-content:center;
+                        }
+
+                        .min-width{
+                            min-width: 160px;
+                        }
+                        
                     }
                 }
             }

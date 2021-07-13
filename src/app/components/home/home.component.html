@@ -21,13 +21,13 @@
 
     <div class="grid">
         <section *ngFor="let country of country_filtered">
-            <mat-card class="country-card" (click)="redirectTo(country.alpha3Code)">
+            <mat-card class="country-card box-shadow" (click)="redirectTo(country.alpha3Code)">
                 <img mat-card-image [src]="country.flag" [alt]="country.name">
-                <mat-card-content>
-                    <h1>{{country.name}}</h1>
-                    <h4><strong>Population: </strong> {{country.population | number}}</h4>
-                    <h4><strong>Region: </strong> {{country.region}} </h4>
-                    <h4><strong>Capital: </strong> {{country.capital}}</h4>
+                <mat-card-content class="country-card__content">
+                    <h1 class="title">{{country.name}}</h1>
+                    <h4 class="bodytext"><strong>Population: </strong> {{country.population | number}}</h4>
+                    <h4 class="bodytext"><strong>Region: </strong> {{country.region}} </h4>
+                    <h4 class="bodytext"><strong>Capital: </strong> {{country.capital}}</h4>
                 </mat-card-content>
               </mat-card>
         </section>
