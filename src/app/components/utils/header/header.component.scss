@@ -1,3 +1,6 @@
+/*import colors*/
+@import "./../../../../theme/variables.scss";
+
 mat-toolbar {
     display: flex;
     justify-content: space-between;
@@ -8,7 +11,7 @@ mat-toolbar {
       height:80px;
       box-sizing: border-box;
       padding: 0 20px;
-
+      background-color: $primary-white;
       @media (min-width:600px) and (max-width:1440px){
         padding: 0 50px;
       }

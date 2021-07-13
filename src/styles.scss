@@ -2,3 +2,10 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Test Theme */
+@import "./theme/variables.scss";
+@import "./theme/buttons.scss";
+@import "./theme/content.scss";
+@import "./theme/fonts.scss";
+@import "./theme/inputs.scss";
+@import "./theme/images.scss";

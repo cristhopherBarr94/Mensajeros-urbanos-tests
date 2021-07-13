@@ -1,0 +1,14 @@
+.col{
+    justify-content:flex-start;
+}
+.country-filters{
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    width: auto;
+    @media (min-width:800px){
+        flex-direction: row;
+        justify-content:space-between;
+        width: 100%;
+    }
+}
