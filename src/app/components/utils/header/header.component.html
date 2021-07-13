@@ -1,7 +1,7 @@
-<mat-toolbar class="nav-toolbar box-shadow" >
+<mat-toolbar class="nav-toolbar box-shadow mat-app-background">
     <h1 class="title-header">Where in the world?</h1>
-    <button mat-button class="btn-header"(click)="routerHome()">
-        <span class="material-icons-outlined">
+    <button mat-button class="btn-header"(click)="darkMode()">
+        <span [ngClass]="switchMode? 'material-icons' : 'material-icons-outlined'">
             dark_mode
             </span>
         <span>

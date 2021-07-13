@@ -1,10 +1,68 @@
-/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/theming";
+@include mat-core();
+$angular-primary: mat-palette($mat-teal, 500, 100, 900);
+$angular-accent: mat-palette($mat-pink, A200, A100, A400);
+$angular-warn: mat-palette($mat-red);
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+$angular-default-theme: mat-light-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+@include angular-material-theme($angular-default-theme);
+
+
+$angular-dark-theme: mat-dark-theme(
+  (
+    color: (
+      primary: $angular-primary,
+      accent: $angular-accent,
+      warn: $angular-warn,
+    ),
+  )
+);
+.darkMode {
+  @include angular-material-color($angular-dark-theme);
+  .mat-toolbar, 
+  .btn-borders,
+  .btn-return {
+    background-color: hsl(209, 23%, 22%) !important;
+}
+.mat-app-background, .darkMode.mat-app-background {
+    background-color: hsl(207, 26%, 17%);
+    color:  hsl(0, 0%, 100%) !important;
+}
+.mat-card {
+    background-color: hsl(209, 23%, 22%) !important;
+    .title, .bodytext{
+        color:  hsl(0, 0%, 100%) !important;
+    }
+}
+.mat-select-panel {
+    background-color: hsl(209, 23%, 22%) !important;
+}
+.mat-select .mat-select-value-text, .mat-select-placeholder,
+.mat-input-element ,
+.mat-form-field-prefix,
+.mat-form-field-suffix,
+.title-header,
+.details__content__title,
+.details__content__bodytext
+{
+    color:  hsl(0, 0%, 100%) !important;
+}
+
+}
+
 /* Test Theme */
 @import "./theme/variables.scss";
 @import "./theme/buttons.scss";
 @import "./theme/content.scss";
 @import "./theme/fonts.scss";
 @import "./theme/inputs.scss";
+
+html, body { height: 100%;margin:0 }

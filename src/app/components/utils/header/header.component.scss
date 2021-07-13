@@ -1,6 +1,3 @@
-/*import colors*/
-@import "./../../../../theme/variables.scss";
-
 mat-toolbar {
     display: flex;
     justify-content: space-between;
@@ -11,7 +8,7 @@ mat-toolbar {
       height:80px;
       box-sizing: border-box;
       padding: 0 20px;
-      background-color: $primary-white;
+      // background-color: hsl(0, 0%, 100%);
       @media (min-width:600px) and (max-width:1440px){
         padding: 0 50px;
       }
@@ -19,3 +16,13 @@ mat-toolbar {
         padding: 0 70px;
       }
   }
+
+    /*Dark Mode Styles*/ 
+  
+    .dark-nav{
+      // background-color: hsl(209, 23%, 22%);
+      transition:0.4s;
+      .title-header, .btn-header{
+        color: hsl(0, 0%, 100%) !important; 
+      }
+    }

@@ -40,7 +40,9 @@
 .btn-header{
   @include btn(100px, 30px, transparent, $primary-black, 'Nunito Sans',12px, 14px !important);
   padding: 0 5px !important;
-  .material-icons-outlined{
+  .material-icons,
+  .material-icons-outlined
+  {
     font-size: 16px;
   }
 
@@ -48,6 +50,7 @@
   
   @include btn(140px, 60px, transparent, $primary-black,'Nunito Sans',16px, 18px !important);
   padding: 5px 16px !important;
+  .material-icons,
   .material-icons-outlined{
     font-size: 22px;
   }

@@ -8,18 +8,16 @@
   font-weight: normal !important;
   font-size: $fsize !important;
   line-height: $lineh !important;
-  color: $color !important;
+  color: $color;
 }
 
 /* Header Title */
 .title-header {
   @include textProperty('Nunito Sans', 14px, 16x, $primary-black);
-  font-weight: 600 !important;
+  font-weight: 800 !important;
   letter-spacing: 2px;
   @media (min-width:1024px){
     @include textProperty('Nunito Sans',26px, 26px, $primary-black);
-    font-weight: 800!important;
-    letter-spacing: 2px;
   }
 }
 /* Inputs */ 

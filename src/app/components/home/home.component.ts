@@ -17,11 +17,17 @@ export class HomeComponent implements OnInit , OnDestroy{
   public country_filtered: any[] = [];
   public region_list: any[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
   public filterCountry = '';
-
+  public switchMode:boolean;
 
   constructor(private router: Router, private countriesService: CountriesService) { }
 
   ngOnInit(): void {
+    let mode = localStorage.getItem('darkMode');
+    if(mode =='enabled'){
+      this.switchMode = true;
+    }else{ 
+      this.switchMode = false;
+    }
    this.getData();  
   }
 
