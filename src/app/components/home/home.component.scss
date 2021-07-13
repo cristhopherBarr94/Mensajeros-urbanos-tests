@@ -9,6 +9,7 @@
     @media (min-width:800px){
         flex-direction: row;
         justify-content:space-between;
+        margin-bottom: 30px;
     }
 }
 .mat-card-image {
@@ -16,12 +17,3 @@
     max-height: 160px !important;
 }
 
-/*Dark Mode Styles*/ 
-
-.dark-container{
-    background-color: hsl(207, 26%, 17%);
-    transition:0.4s;
-    .title-header, .btn-header{
-        color: hsl(0, 0%, 100%) !important; 
-      }
-  }

@@ -34,8 +34,8 @@
                                 </span>
                             </h2>
                             <h2 class="details__content__bodytext"><strong>Languages: </strong>
-                                <span *ngFor="let lang of this.country.languages">
-                                    {{lang.name}},
+                                <span *ngFor="let lang of this.country.languages, last as isLast">
+                                    {{lang.name}}{{isLast? null : ','}}
                                 </span>
                             </h2>
                         </div>

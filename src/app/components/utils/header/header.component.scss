@@ -16,13 +16,3 @@ mat-toolbar {
         padding: 0 70px;
       }
   }
-
-    /*Dark Mode Styles*/ 
-  
-    .dark-nav{
-      // background-color: hsl(209, 23%, 22%);
-      transition:0.4s;
-      .title-header, .btn-header{
-        color: hsl(0, 0%, 100%) !important; 
-      }
-    }

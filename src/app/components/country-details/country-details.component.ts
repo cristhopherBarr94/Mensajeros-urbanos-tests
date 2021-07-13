@@ -41,11 +41,11 @@ export class CountryDetailsComponent implements OnInit, OnDestroy {
     });
     setTimeout(() => {
       window.location.reload()
-    },500)
+    },100)
   }
 
   goBack(){
-    this.router.navigate([``]);
+    this.router.navigate(['']);
   }
 
   ngOnDestroy(){

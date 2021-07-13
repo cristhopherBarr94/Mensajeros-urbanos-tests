@@ -44,6 +44,7 @@
                         flex-direction: column;
                         @media (min-width:1024px){
                             flex-direction:row;
+                            padding-top: 20px;
                         }
 
                         .col{
@@ -58,7 +59,7 @@
                     }
                 }
                 .mat-card-image {
-                    margin: 0 !important;
+                    margin-left: 0 !important;
                 }
             }
         }

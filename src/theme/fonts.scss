@@ -5,7 +5,6 @@
 @mixin textProperty($ffamily, $fsize, $lineh, $color) {
   font-family: $ffamily !important;
   font-style: normal !important;
-  font-weight: normal !important;
   font-size: $fsize !important;
   line-height: $lineh !important;
   color: $color;
@@ -34,24 +33,27 @@
   .title{
     @include textProperty('Nunito Sans', 20px, 22px, $primary-black);
     font-weight: 800 !important;
-
+    text-transform: capitalize;
   }
   .bodytext{
     @include textProperty('Nunito Sans', 14px, 16px, $primary-black);
     font-weight: 300 !important;
     margin-bottom: 0 !important;
+    text-transform: capitalize;
   }
 }
 
 /* Details */
 .details__content{
   &__title{
-    @include textProperty('Nunito Sans', 20px, 22px, $primary-black);
+    @include textProperty('Nunito Sans', 30px, 32px, $primary-black);
     font-weight: 800 !important;
+    text-transform: capitalize;
   }
   &__bodytext{
     @include textProperty('Nunito Sans', 14px, 16px, $primary-black);
     font-weight: 300 !important;
+    text-transform: capitalize;
     @media (min-width:1024px){
       @include textProperty('Nunito Sans', 16px, 18px, $primary-black);
     }

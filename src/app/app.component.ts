@@ -20,8 +20,6 @@ export class AppComponent implements OnInit{
       this.overlay.getContainerElement().classList.add(this.className);
     } else{
       this.className = ''
-      this.overlay.getContainerElement().classList.remove(this.className);
-
     }
   }
 }
