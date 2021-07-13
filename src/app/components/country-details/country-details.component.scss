@@ -1,0 +1,45 @@
+.container{
+        justify-content:flex-start;
+    
+    .row{
+    
+            width:100%;
+  
+        &__1{
+            margin-bottom: 50px;
+            .btn-return{
+                align-self: flex-start;
+            }
+        }
+        &__2{
+            
+            .details{
+                display:flex;
+                flex-direction: column;
+                width:100%;
+                @media (min-width:1024px){
+                    flex-direction:row;
+                }
+
+                &__img{
+                    width:300px;
+                    height:200px;
+
+                    @media (min-width:1024px){
+                        width:600px;
+                        height:400px;
+                        margin-right: 100px;
+                    }
+                }
+                &__content{
+                    flex-direction: column;
+                    padding: 20px 0;
+                    @media (min-width:1024px){
+                        flex-direction:row;
+                    }
+                }
+            }
+        }
+    }
+
+}

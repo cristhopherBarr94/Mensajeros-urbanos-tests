@@ -1,1 +1,55 @@
-<p>country-details works!</p>
+<section class="container col">
+    <div class="row row__1">
+        <button mat-button class="btn-return" (click)="goBack()">
+            <span class="material-icons-outlined">
+                keyboard_backspace
+            </span>
+            <span>
+                Back
+            </span>
+        </button>
+    </div>
+
+    <div class="row row__2">
+        <div class="details" *ngIf="country">
+            <img mat-card-image [src]="flagImg" [alt]="country.name" class="details__img">
+           <div class="details__content">
+                <div class="row">
+                    <div>
+                        <h1>{{this.country.name}}</h1>
+                        <br>
+                       
+                        <h2>Native Name: {{this.country.nativeName}}</h2>
+                        <h2>Population: {{this.country.population | number}}</h2>
+                        <h2>Region: {{this.country.region}}</h2>
+                        <h2>Sub Region: {{this.country.subregion}}</h2>
+                        <h2>Capital: {{this.country.capital}}</h2>
+                    </div>
+                    <br>
+                        <div>
+                            <h2>Top Level Domain: {{this.country.topLevelDomain}}</h2>
+                            <h2>Currencies: 
+                                <span *ngFor="let cur of this.country.currencies">
+                                    {{cur.name}}
+                                </span>
+                            </h2>
+                            <h2>Languages:
+                                <span *ngFor="let lang of this.country.languages">
+                                    {{lang.name}},
+                                </span>
+                            </h2>
+                        </div>
+                </div>
+                <div class="row">
+                    <h2>Border Countries: </h2>
+                    <div class="row">
+                        <span *ngFor="let borderCountry of this.country.borders">
+                            {{borderCountry}}
+                        </span>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+  
+</section>

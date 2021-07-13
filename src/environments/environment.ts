@@ -8,7 +8,8 @@ export const environment = {
 
   countries: {
     getAll: 'all',
-    getByRegion: 'region/'
+    getByRegion: 'region/', 
+    getByCode: 'alpha/'
   }
 };
 

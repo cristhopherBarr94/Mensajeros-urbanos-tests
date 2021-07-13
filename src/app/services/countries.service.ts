@@ -16,10 +16,7 @@ export class CountriesService {
   getData(){
     this.http.get(environment.serverUrl + environment.countries.getAll).subscribe((response:any) => {
       if (response.status == 200) {
-        console.log(response);
-        
         this._countries = response.body;
-
         this._countriesSbj.next(this._countries);
       } else {
         // TODO :: logic for error
@@ -30,10 +27,18 @@ export class CountriesService {
   getByRegion(region:string){
     this.http.get(environment.serverUrl + environment.countries.getByRegion+ region).subscribe((response:any) => {
       if (response.status == 200) {
-        console.log(response);
-        
         this._countries = response.body;
+        this._countriesSbj.next(this._countries);
+      } else {
+        // TODO :: logic for error
+      } 
+      });
+  }
 
+  getByCode(code:string){
+    this.http.get(environment.serverUrl + environment.countries.getByCode+ code).subscribe((response:any) => {
+      if (response.status == 200) {
+        this._countries = response.body;
         this._countriesSbj.next(this._countries);
       } else {
         // TODO :: logic for error

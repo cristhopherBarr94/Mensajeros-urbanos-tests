@@ -15,8 +15,8 @@ export class HomeComponent implements OnInit , OnDestroy{
   private countrySubs: Subscription;
   public country_list: any[] = [];
   public country_filtered: any[] = [];
-  public filterCountry = '';
   public region_list: any[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  public filterCountry = '';
 
 
   constructor(private router: Router, private countriesService: CountriesService) { }
@@ -36,14 +36,11 @@ export class HomeComponent implements OnInit , OnDestroy{
 
    search(){
         const countryResult = []
-
         for(const country of this.country_list){
           if(country.name.toLowerCase().indexOf(this.filterCountry.toLowerCase())>-1){
             countryResult.push(country);
             this.country_filtered = countryResult;
           }
-          console.log(this.country_filtered);
-          
         }
    }
    
