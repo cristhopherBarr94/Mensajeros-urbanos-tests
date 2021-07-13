@@ -42,6 +42,8 @@ export class HomeComponent implements OnInit , OnDestroy{
             countryResult.push(country);
             this.country_filtered = countryResult;
           }
+          console.log(this.country_filtered);
+          
         }
    }
    

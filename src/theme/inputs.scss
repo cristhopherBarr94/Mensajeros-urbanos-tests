@@ -37,8 +37,8 @@
 
 .mat-form-field-prefix, .mat-form-field-suffix {
   margin-right: 20px !important;
-  color: $quaternary-white;
-
+  color: $primary-grey;
+  opacity: 0.5;
 }
 // custom color
 .mat-form-field-appearance-fill .mat-form-field-fill {
