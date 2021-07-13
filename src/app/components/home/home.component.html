@@ -4,26 +4,30 @@
                 <span matPrefix class="material-icons-outlined">
                     search
                     </span>
-                <input matInput type="text"  placeholder="Search for a country..." id="inputSearch">
+                <input matInput type="text"  placeholder="Search for a country..." id="inputSearch" [(ngModel)]="filterCountry" (keyup)="search()">
               </mat-form-field>
             <mat-form-field appearance="fill" class="smallInput">
-            <mat-select placeholder='Filter By Region'>
-              <mat-option value="option1">Option 1</mat-option>
-              <mat-option value="option2">Option 2</mat-option>
-              <mat-option value="option3">Option 3</mat-option>
+            <mat-select placeholder='Filter By Region'   (selectionChange)="readRegionSelected($event.value)">
+              <section *ngFor="let option of region_list">
+                <mat-option
+                  [value]="option"
+                >
+                  {{ option }}
+                </mat-option>
+              </section>
             </mat-select>
           </mat-form-field>
     </div>
 
     <div class="grid">
-        <section *ngFor="let country of [1,2,3,4,5]">
+        <section *ngFor="let country of country_filtered">
             <mat-card class="country-card" (click)="redirectTo(country)">
-                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                <img mat-card-image [src]="country.flag" alt="Photo of a Shiba Inu">
                 <mat-card-content>
-                    <h1>Nombre</h1>
-                    <h4><strong>population: </strong> 1232112</h4>
-                    <h4><strong>region: </strong> 12321 </h4>
-                    <h4><strong>capital: </strong> 12312312</h4>
+                    <h1>{{country.name}}</h1>
+                    <h4><strong>Population: </strong> {{country.population | number}}</h4>
+                    <h4><strong>Region: </strong> {{country.region}} </h4>
+                    <h4><strong>Capital: </strong> {{country.capital}}</h4>
                 </mat-card-content>
               </mat-card>
         </section>
