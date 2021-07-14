@@ -5,21 +5,26 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'country-app';
-  @HostBinding('class') className = ''
+  isDark = false;
 
-  constructor(private overlay: OverlayContainer) { }
-
-  ngOnInit(): void{
-    let mode = localStorage.getItem('darkMode') || 'disabled'
-    if(mode == 'enabled'){
-      this.className = 'darkMode'
-      this.overlay.getContainerElement().classList.add(this.className);
-    } else{
-      this.className = ''
+  @HostBinding('class')
+  get themeMode() {
+    let curTheme = 'ligthMode';
+    if (this.isDark) {
+      curTheme = 'darkMode';
+      this.overlay.getContainerElement().classList.add('darkMode');
+      return curTheme;
     }
+    return curTheme;
+  }
+
+  constructor(private overlay: OverlayContainer) {}
+
+  switchMode(isDarkMode: boolean) {
+    this.isDark = isDarkMode;
   }
 }

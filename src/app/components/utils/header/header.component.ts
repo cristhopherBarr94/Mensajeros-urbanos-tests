@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,22 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Output() readonly darkModeSwithced = new EventEmitter<boolean>();
   public switchMode: boolean = false;
+
   constructor() {}
 
-  ngOnInit(): void {
-    let mode = localStorage.getItem('darkMode') || 'disabled';
-    this.switchMode = mode == 'disabled' ? false : true;
-  }
+  ngOnInit(): void {}
   darkMode() {
-    let state;
     this.switchMode = !this.switchMode;
-    if (this.switchMode) {
-      state = 'enabled';
-    } else {
-      state = 'disabled';
-    }
-    localStorage.setItem('darkMode', state);
-    window.location.reload();
+    this.darkModeSwithced.emit(this.switchMode);
   }
 }
