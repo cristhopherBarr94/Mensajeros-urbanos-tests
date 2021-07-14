@@ -1,19 +1,18 @@
-.col{
-    justify-content:flex-start;
+.col {
+  justify-content: flex-start;
 }
-.country-filters{
-    display:flex;
-    flex-direction: column;
-    justify-content:flex-start;
-    width: 100%;
-    @media (min-width:800px){
-        flex-direction: row;
-        justify-content:space-between;
-        margin-bottom: 30px;
-    }
+.country-filters {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  @media (min-width: 800px) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
 }
 .mat-card-image {
-    min-height: 150px !important;
-    max-height: 160px !important;
+  min-height: 150px !important;
+  max-height: 160px !important;
 }
-

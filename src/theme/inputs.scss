@@ -1,16 +1,15 @@
 /*import colors*/
-@import './variables.scss';
-
+@import "./variables.scss";
 
 .fullInput {
   width: 100%;
-  @media (min-width:1024px){
+  @media (min-width: 1024px) {
     width: 400px;
   }
 }
-.smallInput{
-  width:190px;
-  @media (min-width:1024px){
+.smallInput {
+  width: 190px;
+  @media (min-width: 1024px) {
     width: 210px;
   }
 }
@@ -23,16 +22,17 @@
 }
 .mat-form-field-appearance-fill .mat-form-field-flex {
   background-color: $primary-white;
-  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.05) ;
-  -webkit-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.05) ;
-  -moz-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.05) ;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.05);
 }
 
 .mat-form-field-underline {
-  display:none;
+  display: none;
 }
 
-.mat-form-field-prefix, .mat-form-field-suffix {
+.mat-form-field-prefix,
+.mat-form-field-suffix {
   margin-right: 20px !important;
   color: $primary-grey;
   opacity: 1;
@@ -44,13 +44,12 @@
 }
 
 .mat-select-placeholder {
-  color:  $tertiary-black !important;
+  color: $tertiary-black !important;
 }
 
 // custom select
 .mat-select .mat-select-value-text {
   color: $tertiary-black !important;
-
 }
 
 .mat-select-arrow {
@@ -63,17 +62,16 @@
 
 .mat-form-field-appearance-fill .mat-form-field-flex {
   padding-left: 30px !important;
-  @media (min-width:1024px){
-  padding-left: 40px;
-
+  @media (min-width: 1024px) {
+    padding-left: 40px;
   }
 }
 
 .mat-select-panel {
   background: $primary-white;
   width: 158px !important;
-  @media (min-width:1024px){
-    width:178px !important;
+  @media (min-width: 1024px) {
+    width: 178px !important;
   }
 }
 
@@ -83,10 +81,9 @@
 }
 
 .cdk-overlay-pane {
-transform: translateX(-30px) translateY(35px) !important;
+  transform: translateX(-30px) translateY(35px) !important;
 }
 
 .mat-select-trigger {
-transform: translateY(-5px) !important;
-
+  transform: translateY(-5px) !important;
 }

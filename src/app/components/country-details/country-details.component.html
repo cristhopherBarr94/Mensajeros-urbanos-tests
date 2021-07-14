@@ -1,60 +1,79 @@
 <section class="container col mat-app-background">
-    <div class="row row__1">
-        <button mat-button class="btn-return" (click)="goBack()">
-            <span class="material-icons-outlined">
-                keyboard_backspace
-            </span>
-            <span>
-                Back
-            </span>
-        </button>
-    </div>
+  <div class="row row__1">
+    <button mat-button class="btn-return" (click)="goBack()">
+      <span class="material-icons-outlined"> keyboard_backspace </span>
+      <span> Back </span>
+    </button>
+  </div>
 
-    <div class="row row__2">
-        <div class="details" *ngIf="country">
-            <img mat-card-image [src]="flagImg" [alt]="country.name" class="details__img">
-           <div class="details__content">
-                <div class="inner-section">
-                    <div style="width:50%">
-                        <h1 class="details__content__title">{{this.country.name}}</h1>
-                        <br>
-                       
-                        <h2 class="details__content__bodytext"><strong>Native Name: </strong> {{this.country.nativeName}}</h2>
-                        <h2 class="details__content__bodytext"><strong>Population: </strong> {{this.country.population | number}}</h2>
-                        <h2 class="details__content__bodytext"><strong>Region: </strong> {{this.country.region}}</h2>
-                        <h2 class="details__content__bodytext"><strong>Sub Region: </strong> {{this.country.subregion}}</h2>
-                        <h2 class="details__content__bodytext"><strong>Capital: </strong> {{this.country.capital}}</h2>
-                    </div>
-                    <br>
-                        <div class="col">
-                            <h2 class="details__content__bodytext"><strong>Top Level Domain: </strong> {{this.country.topLevelDomain}}</h2>
-                            <h2 class="details__content__bodytext"><strong>Currencies: </strong> 
-                                <span *ngFor="let cur of this.country.currencies">
-                                    {{cur.name}}
-                                </span>
-                            </h2>
-                            <h2 class="details__content__bodytext"><strong>Languages: </strong>
-                                <span *ngFor="let lang of this.country.languages, last as isLast">
-                                    {{lang.name}}{{isLast? null : ','}}
-                                </span>
-                            </h2>
-                        </div>
-                </div>
-                <br>
-                <div class="inner-section">
-                    <h2 class="details__content__bodytext min-width"><strong>Border Countries: </strong> </h2>
-                    <div class="small-grid">
-                        <button mat-button  
-                        class="btn-borders"
-                        *ngFor="let borderCountry of this.country.borders"
-                        (click)="redirectTo(borderCountry)"
-                        >
-                            {{borderCountry}}
-                        </button>
-                    </div>
-                </div>
-           </div>
+  <div class="row row__2">
+    <div class="details" *ngIf="country">
+      <img
+        mat-card-image
+        [src]="flagImg"
+        [alt]="country.name"
+        class="details__img"
+      />
+      <div class="details__content">
+        <div class="inner-section">
+          <div style="width: 50%">
+            <h1 class="details__content__title">{{ this.country.name }}</h1>
+            <br />
+
+            <h2 class="details__content__bodytext">
+              <strong>Native Name: </strong> {{ this.country.nativeName }}
+            </h2>
+            <h2 class="details__content__bodytext">
+              <strong>Population: </strong>
+              {{ this.country.population | number }}
+            </h2>
+            <h2 class="details__content__bodytext">
+              <strong>Region: </strong> {{ this.country.region }}
+            </h2>
+            <h2 class="details__content__bodytext">
+              <strong>Sub Region: </strong> {{ this.country.subregion }}
+            </h2>
+            <h2 class="details__content__bodytext">
+              <strong>Capital: </strong> {{ this.country.capital }}
+            </h2>
+          </div>
+          <br />
+          <div class="col">
+            <h2 class="details__content__bodytext">
+              <strong>Top Level Domain: </strong>
+              {{ this.country.topLevelDomain }}
+            </h2>
+            <h2 class="details__content__bodytext">
+              <strong>Currencies: </strong>
+              <span *ngFor="let cur of this.country.currencies">
+                {{ cur.name }}
+              </span>
+            </h2>
+            <h2 class="details__content__bodytext">
+              <strong>Languages: </strong>
+              <span *ngFor="let lang of this.country.languages; last as isLast">
+                {{ lang.name }}{{ isLast ? null : "," }}
+              </span>
+            </h2>
+          </div>
         </div>
+        <br />
+        <div class="inner-section">
+          <h2 class="details__content__bodytext min-width">
+            <strong>Border Countries: </strong>
+          </h2>
+          <div class="small-grid">
+            <button
+              mat-button
+              class="btn-borders"
+              *ngFor="let borderCountry of this.country.borders"
+              (click)="redirectTo(borderCountry)"
+            >
+              {{ borderCountry }}
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-  
+  </div>
 </section>

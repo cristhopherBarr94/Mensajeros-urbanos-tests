@@ -5,22 +5,20 @@ import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class HttpService {
-
-  constructor( private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getHeaders() {
-
-      return {
-        'Content-Type': 'application/json; charset=UTF-8',
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Headers':
-          'Origin, X-Requested-With, Content-Type, Accept',
-        'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE',
-      };
-    }
+    return {
+      'Content-Type': 'application/json; charset=UTF-8',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers':
+        'Origin, X-Requested-With, Content-Type, Accept',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, PATCH, DELETE',
+    };
+  }
 
   public get(url: string, headersIn?: any): Observable<object> {
     if (headersIn == null) {

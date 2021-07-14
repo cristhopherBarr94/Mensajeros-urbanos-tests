@@ -1,68 +1,64 @@
-.container{
-        justify-content:flex-start;
-    
-    .row{
-    
-            width:100%;
-  
-        &__1{
-            margin-bottom: 50px;
-            .btn-return{
-                align-self: flex-start;
-            }
-        }
-        &__2{
-            
-            .details{
-                display:flex;
-                flex-direction: column;
-                align-items: flex-start;
-                width:100%;
-                @media (min-width:1024px){
-                    flex-direction:row;
-                }
+.container {
+  justify-content: flex-start;
 
-                &__img{
-                    width:300px;
-                    height:200px;
+  .row {
+    width: 100%;
 
-                    @media (min-width:1024px){
-                        width:600px;
-                        height:400px;
-                        margin-right: 100px;
-                    }
-                }
-                &__content{
-                    flex-direction: column;
-                    flex: 1;
-                    padding: 20px 0;
-                    @media (min-width:1024px){
-                        flex-direction:row;
-                    }
-                    .inner-section{
-                        display:flex;
-                        flex-direction: column;
-                        @media (min-width:1024px){
-                            flex-direction:row;
-                            padding-top: 20px;
-                        }
-
-                        .col{
-                            align-items: flex-start;
-                            justify-content:center;
-                        }
-
-                        .min-width{
-                            min-width: 160px;
-                        }
-                        
-                    }
-                }
-                .mat-card-image {
-                    margin-left: 0 !important;
-                }
-            }
-        }
+    &__1 {
+      margin-bottom: 50px;
+      .btn-return {
+        align-self: flex-start;
+      }
     }
+    &__2 {
+      .details {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        @media (min-width: 1024px) {
+          flex-direction: row;
+        }
 
+        &__img {
+          width: 300px;
+          height: 200px;
+
+          @media (min-width: 1024px) {
+            width: 600px;
+            height: 400px;
+            margin-right: 100px;
+          }
+        }
+        &__content {
+          flex-direction: column;
+          flex: 1;
+          padding: 20px 0;
+          @media (min-width: 1024px) {
+            flex-direction: row;
+          }
+          .inner-section {
+            display: flex;
+            flex-direction: column;
+            @media (min-width: 1024px) {
+              flex-direction: row;
+              padding-top: 20px;
+            }
+
+            .col {
+              align-items: flex-start;
+              justify-content: center;
+            }
+
+            .min-width {
+              min-width: 160px;
+            }
+          }
+        }
+        .mat-card-image {
+          margin-left: 0 !important;
+        }
+      }
+    }
+  }
 }

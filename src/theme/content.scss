@@ -1,5 +1,5 @@
 /*import colors*/
-@import './variables.scss';
+@import "./variables.scss";
 
 /* flex styles */
 .row {
@@ -19,40 +19,39 @@
 
 .grid {
   display: grid;
-  grid-template-columns: auto ;
+  grid-template-columns: auto;
   grid-gap: 10px;
   grid-row-gap: 40px;
   width: 100%;
 
-  @media (min-width:600px) and (max-width:800px){
+  @media (min-width: 600px) and (max-width: 800px) {
     grid-template-columns: auto auto;
     grid-gap: 20px;
     grid-row-gap: 40px;
   }
-  @media (min-width:801px) and (max-width:1024px){
+  @media (min-width: 801px) and (max-width: 1024px) {
     grid-template-columns: auto auto auto;
     grid-gap: 20px;
     grid-row-gap: 60px;
   }
-  @media (min-width:1025px) and(max-width:1440px){
-      grid-template-columns: auto auto auto auto;
-      grid-gap: 50px;
-      grid-row-gap: 60px;
-    }
-  @media (min-width:1441px){
-      grid-template-columns: auto auto auto auto auto;
-      grid-gap: 80px;
-      grid-row-gap: 60px;
+  @media (min-width: 1025px) and(max-width:1440px) {
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 50px;
+    grid-row-gap: 60px;
   }
+  @media (min-width: 1441px) {
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 80px;
+    grid-row-gap: 60px;
   }
+}
 
-  .small-grid {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    grid-gap: 10px;
-    grid-row-gap: 20px;
-    }
-
+.small-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 10px;
+  grid-row-gap: 20px;
+}
 
 .box-shadow {
   box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2) !important;
@@ -60,27 +59,25 @@
   -moz-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.2) !important;
 }
 
-.container{
+.container {
   box-sizing: border-box;
   padding: 25px 30px;
   color: $primary-black;
   background-color: $secondary-white;
-  min-height:100vh;
-  @media (min-width: 1024px){
-  padding: 50px 70px;
+  min-height: 100vh;
+  @media (min-width: 1024px) {
+    padding: 50px 70px;
   }
 }
 
 /* Home Styles*/
 
-.country-card{
-width:220px;
-height: 280px;
-margin:auto;
-cursor: pointer;
-@media (min-width: 1024px){
-  margin:0;
+.country-card {
+  width: 220px;
+  height: 280px;
+  margin: auto;
+  cursor: pointer;
+  @media (min-width: 1024px) {
+    margin: 0;
   }
 }
-
-

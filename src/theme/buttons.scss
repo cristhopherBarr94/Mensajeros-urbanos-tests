@@ -33,54 +33,89 @@
   text-transform: capitalize;
   &:hover {
     transform: scale(1.1);
-
   }
 }
 
-.btn-header{
-  @include btn(100px, 30px, transparent, $primary-black, 'Nunito Sans',12px, 14px !important);
+.btn-header {
+  @include btn(
+    100px,
+    30px,
+    transparent,
+    $primary-black,
+    "Nunito Sans",
+    12px,
+    14px !important
+  );
   padding: 0 5px !important;
   .material-icons,
-  .material-icons-outlined
-  {
+  .material-icons-outlined {
     font-size: 16px;
   }
 
-  @media (min-width:600px){
-  
-  @include btn(140px, 60px, transparent, $primary-black,'Nunito Sans',16px, 18px !important);
-  padding: 5px 16px !important;
-  .material-icons,
-  .material-icons-outlined{
-    font-size: 22px;
-  }
+  @media (min-width: 600px) {
+    @include btn(
+      140px,
+      60px,
+      transparent,
+      $primary-black,
+      "Nunito Sans",
+      16px,
+      18px !important
+    );
+    padding: 5px 16px !important;
+    .material-icons,
+    .material-icons-outlined {
+      font-size: 22px;
+    }
   }
 }
 
-.btn-return{
-  @include btn(100px, 30px, $primary-white, $primary-black, 'Nunito Sans',14px, 16px !important);
+.btn-return {
+  @include btn(
+    100px,
+    30px,
+    $primary-white,
+    $primary-black,
+    "Nunito Sans",
+    14px,
+    16px !important
+  );
   border-radius: 0 !important;
-  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
-  -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
-  -moz-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
-  .material-icons-outlined{
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05);
+  .material-icons-outlined {
     font-size: 20px;
   }
 
-  @media (min-width:600px){
-    @include btn(140px, 40px, $primary-white, $primary-black, 'Nunito Sans',16px, 18px !important);
-    .material-icons-outlined{
+  @media (min-width: 600px) {
+    @include btn(
+      140px,
+      40px,
+      $primary-white,
+      $primary-black,
+      "Nunito Sans",
+      16px,
+      18px !important
+    );
+    .material-icons-outlined {
       font-size: 20px;
     }
   }
 }
 
-.btn-borders{
-  @include btn(100px, 30px, $primary-white, $primary-black, 'Nunito Sans',14px, 16px !important);
+.btn-borders {
+  @include btn(
+    100px,
+    30px,
+    $primary-white,
+    $primary-black,
+    "Nunito Sans",
+    14px,
+    16px !important
+  );
   border-radius: 0 !important;
-  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
-  -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
-  -moz-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05) ;
-
-
+  box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.05);
 }
